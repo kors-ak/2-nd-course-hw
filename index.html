@@ -3,20 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
   <title>Мини-игры</title>
 </head>
+
 <body>
-  <section class="top">
-    <h1>Добро пожаловать на мой сайт мини-игр</h1>
+  <section class="top center">
+    <h1 class="top__title">Добро пожаловать на&nbsp;мой сайт мини-игр</h1>
     <p>Тебе предстоит пройти несколько увлекательных игр. Если готов, нажимай <span>«Поехали!»</span> и <span>приступай</span>.</p>
+    <a class="top__button" href="#about">Поехали!</a>
   </section>
   
-  <section class="about">
-
+  <section class="about center" id="about">
+    <h2 class="about__title">Об играх</h2>
+    <p>В моей коллекции представлено 6 игр на разные темы. <br>Игры несложные — в них может поиграть каждый. <br>
+      Все игры доступны для пользования.</p>
+      <div class="about__content">
+        <a class="card-mini" href="#">
+          <img src="./img/content/game1.svg" alt="угадай число">
+          <div class="card-mini__description">
+            <p class="card-mini__number">Игра №1</p>
+            <h3 class="card-mini__name">Угадай число</h3>
+          </div>
+        </a>
+        
+        <a class="card-mini" href="#">
+          <img src="./img/content/game2.svg" alt="простая арифметика">
+          <div class="card-mini__description">
+            <p class="card-mini__number">Игра №2</p>
+            <h3 class="card-mini__name">Простая арифметика</h3>
+          </div>
+        </a>
+        
+        <a class="card-mini" href="#">
+          <img src="./img/content/game3.svg" alt="переверни текст">
+          <div class="card-mini__description">
+            <p class="card-mini__number">Игра №3</p>
+            <h3 class="card-mini__name">Переверни текст</h3>
+          </div>
+        </a>
+        
+        <a class="card-mini" href="#">
+          <div class="back">
+            <img class="back" src="./img/content/game4.svg" alt="камень, ножницы, бумага">
+            <img class="front" src="./img/content/game4-add.png" alt="камень">
+          </div>
+          <div class="card-mini__description">
+            <p class="card-mini__number">Игра №4</p>
+            <h3 class="card-mini__name">Камень, ножницы, бумага</h3>
+          </div>
+        </a>
+        
+        <a class="card-mini" href="#">
+          <img src="./img/content/game5.svg" alt="простая викторина">
+          <div class="card-mini__description">
+            <p class="card-mini__number">Игра №5</p>
+            <h3 class="card-mini__name">Простая викторина</h3>
+          </div>
+        </a>
+        
+        <a class="card-mini" href="#">
+          <img src="./img/content/game6.svg" alt="генератор случайных цветов">
+          <div class="card-mini__description">
+            <p class="card-mini__number">Игра №6</p>
+            <h3 class="card-mini__name">Генератор случайных цветов</h3>
+          </div>
+        </a>
+      </div>
   </section>
 
-  <footer>
-
+  <footer class="footer center">
+    <h2 class="footer__title">Все права защищены.</h2>
   </footer>
 </body>
 </html>

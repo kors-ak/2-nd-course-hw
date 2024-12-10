@@ -31,7 +31,8 @@ html {
   scroll-behavior: smooth;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-size: 64px;
   font-weight: 700;
   line-height: 78px;
@@ -81,7 +82,7 @@ a {
 
   &__button {
     @extend %button;
-    
+
     &-mobile {
       display: none;
     }
@@ -130,7 +131,8 @@ a {
     box-shadow: 0px 12.61px 42.25px -7.57px rgba(0, 0, 0, 0.13);
     transition: all 0.4s;
 
-    &:nth-child(6n+6), &:nth-child(6n+4) {
+    &:nth-child(6n+6),
+    &:nth-child(6n+4) {
       margin-top: -39px;
     }
 
@@ -150,7 +152,8 @@ a {
     &__number {
       display: block;
       width: fit-content;
-      border-radius: 52.58px;background: rgb(247, 247, 247);
+      border-radius: 52.58px;
+      background: rgb(247, 247, 247);
       color: rgb(39, 26, 88);
       font-size: 16px;
       font-weight: 500;
@@ -166,16 +169,101 @@ a {
       line-height: 39px;
     }
 
+    img {
+      width: 100%;
+      border-radius: 30px;
+    }
+
     .back {
       position: relative;
     }
-    
+
     .front {
+      width: 25.17%;
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
     }
+  }
+}
+
+.mini-games {
+  padding-top: 46px;
+  padding-bottom: 144px;
+  background-color: rgb(32, 32, 39);
+  background-image: url(./img/decoration/stars-4.svg), url(./img/decoration/stars-5.svg);
+  background-position: calc(100% - 45px) 93px, calc(100% - 52px) calc(100% - 45px);
+  background-repeat: no-repeat;
+
+  &__content {
+    margin-top: 72px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+}
+
+.card {
+  border-radius: 30px;
+  box-shadow: 0px 20px 67px -12px rgba(0, 0, 0, 0.13);
+  background: rgb(255, 255, 255);
+  display: flex;
+
+  img {
+    width: 50%;
+    border-radius: 30px;
+  }
+
+  .back {
+    width: 50%;
+    position: relative;
+    display: flex;
+
+    img {
+      width: 100%;
+    }
+
+    .front {
+      width: 25.17%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__description {
+    width: 50%;
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__name {
+    max-width: 459px;
+    color: rgb(32, 32, 39);
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 59px;
+  }
+
+  &__text {
+    color: rgb(32, 32, 39);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+  }
+
+  &__button {
+    @extend %button;
+    margin-top: 12px; 
+  }
+
+  &:nth-child(2n+1) {
+    display: flex;
+    flex-direction: row-reverse;
   }
 }
 

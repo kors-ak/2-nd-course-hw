@@ -1,16 +1,22 @@
 // task 1
-for (let i = 0; i < 2; i++) {
+let i = 0;
+while (i < 2) {
   console.log('Привет');
+  i++;
 }
 
 // task 2
-for (let i = 1; i >= 1 && i <= 5; i++) {
+i = 1;
+while (i >= 1 && i <= 5) {
   console.log(i);
+  i++;
 }
 
 // task 3
-for (let i = 7; i <= 22; i++) {
+i = 7;
+while (i <= 22) {
   console.log(i);
+  i++;
 }
 
 // task 4
@@ -28,11 +34,11 @@ for (const key in obj) {
 let n = 1000;
 let iterations = 0;
 
-while (n >= 50) {
+do {
   n /= 2;
   console.log(n);
   iterations++;
-}
+} while (n >= 50);
 
 console.log(`Результат деления: ${n}`);
 console.log(`Количество итераций: ${iterations}`);
@@ -41,10 +47,10 @@ console.log(`Количество итераций: ${iterations}`);
 let firstFriday = 6;
 let monthDays = 31;
 
-while (firstFriday <= monthDays) {
+do {
   console.log(`Сегодня пятница, ${firstFriday}-е число. Необходимо подготовить отчет.`);
   firstFriday += 7;
-}
+} while (firstFriday <= monthDays);
 
 // additional task 1
 let k = 100;
@@ -60,7 +66,7 @@ console.log(`Результат: ${k}`);
 console.log(`Количество итераций: ${iterations}`);
 
 // additional task 2
-let months = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь']
+let months = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
 
 for (let i = 0; i < months.length; i++) {
   console.log(`${months[i]} - это ${i+1}-й месяц в году`);
@@ -78,7 +84,7 @@ for (const key in book) {
   console.log(`${key}: ${book[key]}`);
 }
 
-// additional task 4 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// additional task 4
 let randomNumbers = [];
 for (let i = 0; i < 10; i++) {
   randomNumbers.push(Math.floor(Math.random() * 100));

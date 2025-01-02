@@ -17,6 +17,7 @@
 .card__button:hover, .top__button:hover {
   background: #FFFFFF;
   color: rgb(32, 32, 39);
+  cursor: pointer;
 }
 
 * {
@@ -246,6 +247,33 @@ a {
   text-align: center;
 }
 
+.game1 {
+  filter: hue-rotate(170deg);
+}
+
+.tohomepage {
+  margin-left: 24px;
+  margin-top: 32px;
+  text-decoration: none;
+  display: flex;
+  width: -moz-fit-content;
+  width: fit-content;
+  gap: 8px;
+  justify-content: left;
+  align-items: center;
+  height: 40px;
+  color: rgb(0, 0, 0);
+  font-size: 24px;
+  font-weight: 400;
+  transition: all 0.2s;
+}
+.tohomepage img {
+  height: 22px;
+}
+.tohomepage:hover {
+  filter: opacity(0.5);
+}
+
 @media (max-width: 1240px) {
   .center {
     padding-left: calc(50% - 480px);
@@ -314,6 +342,9 @@ a {
     font-size: 24px;
     font-weight: 600;
     line-height: 141.69%;
+  }
+  .top .tohomepage {
+    margin-left: -8px;
   }
   .about {
     display: none;
@@ -411,6 +442,14 @@ a {
     font-weight: 600;
     line-height: 141.69%;
   }
+  .top .tohomepage {
+    margin-left: 0;
+    margin-top: 8px;
+    font-size: 16px;
+  }
+  .top .tohomepage img {
+    display: none;
+  }
   .mini-games__content {
     align-items: center;
   }
@@ -429,5 +468,23 @@ a {
 @media (max-width: 425px) {
   .top p {
     max-width: 296px;
+  }
+}
+@media (max-width: 296px) {
+  .top__button-mobile, .card {
+    width: 96%;
+  }
+  .mini-games .about__title {
+    font-size: 22px;
+    line-height: 24px;
+  }
+  .mini-games .card__name {
+    font-size: 22px;
+    line-height: 24px;
+  }
+  .top__title {
+    width: auto;
+    font-size: 22px;
+    line-height: 24px;
   }
 }/*# sourceMappingURL=style.css.map */

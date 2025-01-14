@@ -127,8 +127,10 @@ for (let i = 0; i < 10; i++) {
   arrayTask14.push(Math.floor(Math.random() * 11));
 }
 
+evenArray = arrayTask14.filter(item => item % 2 === 0);
+
 console.log(arrayTask14);
-console.log(arrayTask14.filter(item => item % 2 === 0));
+console.log(evenArray);
 
 // Задание 15
 console.log('Задание 15');
@@ -140,4 +142,4 @@ for (let i = 0; i < 6; i++) {
 }
 
 console.log(arrayTask15);
-console.log(arrayTask15.reduce((a, b) => a + b) / 2);
+console.log(arrayTask15.reduce((a, b) => a + b) / arrayTask15.length);

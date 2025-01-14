@@ -9,6 +9,7 @@ function guessNumberGame() {
       alert(`Поздраляем, число угадано! Удача сегодня на твоей стороне 😉`);
       break;
     } else if (userNumber === null) {
+      alert('Ждем тебя снова!')
       break;
     } else  if (userNumber < randomNumber) {
       userNumber = prompt(`Упс, твое число оказалось меньше загаданного! Попробуй ввести значение больше ⭡`);
@@ -29,10 +30,11 @@ function arithmeticGame() {
 
   let playAgain = true;
   let greetingArray = ['Всё верно!', 'В яблочко!', 'Гениально!', 'У тебя великолепно получается!', 'Как тебе это удается? Решено отлично!', 'Именно так!', 'Идеальное решение!'];
+  let tryAgainArray = ['Вариант хороший, но неверный.', 'Почти правильно!', 'Не совсем верно.', 'У тебя обязательно получится!'];
+  let taskArray = ['Попробуй решить такую задачу:', 'Задачка специально для тебя 😉', 'Найдешь решение для следующей задачи?'];
   const operationArray = ['+', '-', '*', '/'];
 
   while (playAgain) {
-    let greeting = greetingArray[Math.floor(Math.random() * greetingArray.length)];
     let operation = operationArray[Math.floor(Math.random() * operationArray.length)];
     let a;
     let b;
@@ -61,23 +63,26 @@ function arithmeticGame() {
         break;
     }
 
-    let userAnswer = prompt(`Попробуй решить такую задачу: \n${a} ${operation} ${b} = ?`);
+    let task = taskArray[Math.floor(Math.random() * taskArray.length)];
+    let userAnswer = prompt(`${task} \n${a} ${operation} ${b} = ?`);
 
     while (true) {
       if (userAnswer == null) {
         playAgain = false;
         break;
       } else if (userAnswer == answer) {
+        let greeting = greetingArray[Math.floor(Math.random() * greetingArray.length)];
         playAgain = confirm(`${greeting} Продолжаем?`);
         break;
       } else {
-        userAnswer = prompt(`Вариант хороший, но неверный. Попробуй решить задачу ещё раз: \n ${a} ${operation} ${b} = ?`);
+        let tryAgain = tryAgainArray[Math.floor(Math.random() * tryAgainArray.length)];
+        userAnswer = prompt(`${tryAgain} Попробуй решить задачу ещё раз: \n ${a} ${operation} ${b} = ?`);
       }
     }
   }
 
   if (playAgain === false) {
-    alert('Ждем тебя снова!')
+    alert('Ждем тебя снова!');
   }
 }
 

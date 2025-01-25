@@ -1,7 +1,13 @@
+// Общие функции:
+
+function getRandomNumber(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 //1 - Генератор случайных цветов
 
 function guessNumberGame() {
-  let randomNumber = Math.floor(Math.random() * 100 + 1);
+  let randomNumber = getRandomNumber(1, 100);
   console.log(randomNumber);
   let userNumber = prompt(`Введи число от 1 до 100 и испытай свою удачу!`);
   while (true) {
@@ -24,10 +30,6 @@ function guessNumberGame() {
 //2 - Простая арифметика
 
 function arithmeticGame() {
-  function getRandomNumber(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
-
   let playAgain = true;
   let greetingArray = ['Всё верно!', 'В яблочко!', 'Гениально!', 'У тебя великолепно получается!', 'Как тебе это удается? Решено отлично!', 'Именно так!', 'Идеальное решение!'];
   let tryAgainArray = ['Вариант хороший, но неверный.', 'Почти правильно!', 'Не совсем верно.', 'У тебя обязательно получится!'];
@@ -35,7 +37,7 @@ function arithmeticGame() {
   const operationArray = ['+', '-', '*', '/'];
 
   while (playAgain) {
-    let operation = operationArray[Math.floor(Math.random() * operationArray.length)];
+    let operation = operationArray[getRandomNumber(0, operationArray.length - 1)];
     let a;
     let b;
     let answer;
@@ -63,7 +65,7 @@ function arithmeticGame() {
         break;
     }
 
-    let task = taskArray[Math.floor(Math.random() * taskArray.length)];
+    let task = taskArray[getRandomNumber(0, taskArray.length - 1)];
     let userAnswer = prompt(`${task} \n${a} ${operation} ${b} = ?`);
 
     while (true) {
@@ -71,11 +73,11 @@ function arithmeticGame() {
         playAgain = false;
         break;
       } else if (userAnswer == answer) {
-        let greeting = greetingArray[Math.floor(Math.random() * greetingArray.length)];
+        let greeting = greetingArray[getRandomNumber(0, greetingArray.length - 1)];
         playAgain = confirm(`${greeting} Продолжаем?`);
         break;
       } else {
-        let tryAgain = tryAgainArray[Math.floor(Math.random() * tryAgainArray.length)];
+        let tryAgain = tryAgainArray[getRandomNumber(0, tryAgainArray.length - 1)];
         userAnswer = prompt(`${tryAgain} Попробуй решить задачу ещё раз: \n ${a} ${operation} ${b} = ?`);
       }
     }

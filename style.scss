@@ -283,11 +283,19 @@ a {
 
 // стили страниц с играми
 .game1 {
-  filter: hue-rotate(170deg)
+  filter: hue-rotate(170deg);
 }
 
 .game2 {
-  filter: hue-rotate(-24deg)
+  filter: hue-rotate(-24deg);
+}
+
+.game3 {
+  filter: hue-rotate(160deg);
+}
+
+.game4 {
+  filter: hue-rotate(8deg);
 }
 
 .tohomepage {

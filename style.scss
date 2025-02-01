@@ -298,6 +298,14 @@ a {
   filter: hue-rotate(8deg);
 }
 
+.game5 {
+  filter: hue-rotate(293deg);
+
+  .top__title {
+    max-width: 624px;
+  }
+}
+
 .tohomepage {
   margin-left: 24px;
   margin-top: 32px;

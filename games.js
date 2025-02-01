@@ -211,6 +211,8 @@ function rockPaperScissorsGame() {
         return 'ножницы ✌️';
       case 'бумага':
         return 'бумага ✋';
+      default:
+        return item + ' 🌟';
     }
   }
 
@@ -228,8 +230,10 @@ function rockPaperScissorsGame() {
   let play = true;
 
   while (play) {
-    let userChoice = prompt(`${taskArray[getRandomNumber(0, taskArray.length - 1)]}`);
+    const computerChoice = choices[getRandomNumber(0, choices.length - 1)];
+    console.log(computerChoice);
     
+    let userChoice = prompt(`${taskArray[getRandomNumber(0, taskArray.length - 1)]}`);
     if (userChoice === null) {
       play = false;
       break;
@@ -245,11 +249,8 @@ function rockPaperScissorsGame() {
       }
       userChoice = userChoice.toLowerCase();
     }
-
     if (!play) break;
 
-    const computerChoice = choices[getRandomNumber(0, choices.length - 1)];
-    console.log(computerChoice)
     const result = determineWinner(userChoice, computerChoice);
     play = confirm(`Твой выбор: ${addEmoji(userChoice)} \nВыбор компьютера: ${addEmoji(computerChoice)} \n${result} Продолжаем?`);
   }

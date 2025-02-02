@@ -114,7 +114,7 @@ function textTurnGame() {
     playAgain = confirm(`${greeting} \n${result} \nПродолжаем?`);
   }
 
-  if (playAgain === false) {
+  if (!playAgain) {
     alert('Ждем тебя снова!');
   }
 }
@@ -165,14 +165,19 @@ function quizGame() {
 
   for (let i = 0; i < quiz.length; i++) {
     let userAnswer = prompt(`${quiz[i].question} \n${quiz[i].options.join('\n')}`);
-    if (+userAnswer === quiz[i].correctAnswer || quiz[i].options[quiz[i].correctAnswer - 1].toLowerCase().includes(userAnswer.toLowerCase())) {
-      score++;
-      alert(`Верно! \nОсталось вопросов: ${quiz.length - (i + 1)}`);
-    } else if (userAnswer === null) {
+
+    while (userAnswer === '') {
+      userAnswer = prompt(`Ты ничего не ввел. Попробуй еще раз! \n${quiz[i].question} \n${quiz[i].options.join('\n')}`);
+    }
+
+    if (userAnswer === null) {
       play = false;
       break;
+    } else if (+userAnswer === quiz[i].correctAnswer || quiz[i].options[quiz[i].correctAnswer - 1].toLowerCase().includes(userAnswer.toLowerCase())) {
+      score++;
+      alert(`Верно! \nОсталось вопросов: ${quiz.length - (i + 1)}`);
     } else {
-      alert(`Почти! Правильный ответ - ${quiz[i].options[quiz[i].correctAnswer - 1]} \nОсталось вопросов: ${quiz.length - (i + 1)}`);
+      alert(`Почти! \nПравильный ответ: ${quiz[i].options[quiz[i].correctAnswer - 1]} \nОсталось вопросов: ${quiz.length - (i + 1)}`);
     }
   }
 
@@ -189,7 +194,7 @@ function quizGame() {
     break;
   }
 
-  if (play === false) {
+  if (!play) {
     alert(`Ждем тебя снова!`);
   }
 }
@@ -232,7 +237,7 @@ function rockPaperScissorsGame() {
   while (play) {
     const computerChoice = choices[getRandomNumber(0, choices.length - 1)];
     console.log(computerChoice);
-    
+
     let userChoice = prompt(`${taskArray[getRandomNumber(0, taskArray.length - 1)]}`);
     if (userChoice === null) {
       play = false;

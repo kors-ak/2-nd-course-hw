@@ -270,6 +270,18 @@ a {
   max-width: 624px;
 }
 
+.game6 {
+  background-color: rgb(255, 255, 128);
+  background-image: url(./img/decoration/stars-1-transp.svg), url(./img/decoration/star-big-1-transp.svg), url(./img/decoration/stars-2-transp.svg);
+  padding-bottom: 88px;
+}
+.game6 .top__title {
+  max-width: 744px;
+}
+.game6 #colorGenerator {
+  font-weight: 400;
+}
+
 .tohomepage {
   margin-left: 24px;
   margin-top: 32px;
@@ -381,6 +393,9 @@ a {
     width: 100%;
     font-size: 20px;
     margin-top: 16px;
+  }
+  .game6 {
+    background-image: url(./img/decoration/stars-small-1-transp.svg), url(./img/decoration/star-big-3-transp.svg), url(./img/decoration/stars-small-2-transp.svg);
   }
 }
 @media (max-width: 833px) {

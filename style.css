@@ -146,7 +146,7 @@ a {
   padding-bottom: 50px;
   background-color: rgb(32, 32, 39);
   background-image: url(./img/decoration/stars-3.svg), url(./img/decoration/star-big-2.svg);
-  background-position: 25px 770px, calc(100% + 142px) 77px;
+  background-position: 25px 770px, calc(100% + 108px) 111px;
   background-repeat: no-repeat;
 }
 
@@ -168,7 +168,7 @@ a {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 32px;
+  gap: 25px 32px;
 }
 .about .card-mini {
   max-width: 378px;

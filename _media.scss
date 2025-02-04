@@ -4,12 +4,18 @@
     padding-right: calc(50% - 480px);
   }
 
+  .top {
+    min-height: 720px;
+  }
+
   .about {
     .card-mini {
-      &:nth-child(6n+6), &:nth-child(6n+4) {
+
+      &:nth-child(6n+6),
+      &:nth-child(6n+4) {
         margin-top: 0px;
       }
-  
+
       &:nth-child(6n+3) {
         margin-top: -39px;
       }
@@ -43,7 +49,8 @@
 // Планшет
 @media (max-width: 1024px) {
 
-  h1, h2 {
+  h1,
+  h2 {
     font-size: 48px;
     line-height: 49px;
   }
@@ -69,7 +76,7 @@
     p {
       text-align: center;
     }
-    
+
     &__button {
       display: none;
 
@@ -92,6 +99,23 @@
 
     .tohomepage {
       margin-left: -8px;
+    }
+
+    &__animated {
+      animation: scrollTextTablet 24s linear infinite;
+    }
+
+    &__string {
+      margin-top: 16px;
+      margin-bottom: 16px;
+      font-size: 24px;
+      line-height: 100%;
+      letter-spacing: 4%;
+
+      &::after {
+        top: -6px;
+        scale: 0.8;
+      }
     }
   }
 
@@ -132,6 +156,8 @@
   }
 
   .top {
+    min-height: 100vw;
+
     &__button {
       display: none;
 
@@ -230,9 +256,29 @@
       margin-left: 0;
       margin-top: 8px;
       font-size: 16px;
-    
+
       img {
         display: none;
+      }
+    }
+
+    &__animated {
+      padding-left: 32px;
+      gap: 90px;
+      animation: scrollTextMobile 24s linear infinite;
+    }
+
+    &__string {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-size: 18px;
+      line-height: 100%;
+      letter-spacing: 4%;
+
+      &::after {
+        right: -64px;
+        top: -10px;
+        scale: 0.55;
       }
     }
   }
@@ -242,11 +288,12 @@
       align-items: center;
     }
 
-     .card {
+    .card {
       flex-direction: column;
       max-width: 420px;
 
-      img, .back {
+      img,
+      .back {
         width: 100%;
         margin-bottom: -1px;
       }
@@ -267,7 +314,9 @@
 }
 
 @media (max-width: 296px) {
-  .top__button-mobile, .card {
+
+  .top__button-mobile,
+  .card {
     width: 96%;
   }
 
@@ -285,5 +334,9 @@
     width: auto;
     font-size: 22px;
     line-height: 24px;
+  }
+
+  .top__container {
+    display: none;
   }
 }

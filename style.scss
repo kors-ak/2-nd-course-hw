@@ -1,3 +1,33 @@
+@keyframes scrollText {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-3050px);
+  }
+}
+
+@keyframes scrollTextTablet {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-2605px);
+  }
+}
+
+@keyframes scrollTextMobile {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-1872px);
+  }
+}
+
 %button {
   text-decoration: none;
   display: flex;
@@ -51,8 +81,9 @@ a {
 }
 
 .top {
+  position: relative;
   padding-top: 196px;
-  padding-bottom: 246px;
+  min-height: 800px;
   background-color: #E1FF8F;
   background-image: url(./img/decoration/stars-1.svg), url(./img/decoration/star-big-1.svg), url(./img/decoration/stars-2.svg);
   background-position: 63px 69px, calc(100% + 489px) calc(100% - 3px), calc(100% - 344px) calc(100% - 149px);
@@ -65,7 +96,7 @@ a {
     max-width: 768px;
   }
 
-  p {
+  &__description {
     margin-top: 24px;
     margin-bottom: 48px;
     max-width: 720px;
@@ -74,7 +105,6 @@ a {
     font-weight: 400;
     line-height: 32px;
     letter-spacing: 0px;
-    text-align: left;
 
     span {
       font-weight: 600;
@@ -88,6 +118,46 @@ a {
       display: none;
     }
   }
+
+  &__container {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(50px);
+    background: rgb(188, 236, 48);
+    overflow: hidden;
+  }
+
+  &__animated {
+    display: flex;
+    flex-direction: row;
+    gap: 138px;
+    padding-left: 49px;
+    padding-right: 87px;
+    white-space: nowrap;
+    animation: scrollText 24s linear infinite;
+  }
+
+  &__string {
+    position: relative;
+    display: block;
+    margin-top: 27px;
+    margin-bottom: 27px;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 110%;
+    letter-spacing: 4%;
+    text-transform: uppercase;
+    color: rgb(32, 32, 39);
+
+    &::after {
+      content: url(./img/decoration/star-single.svg);
+      right: -87px;
+      position: absolute;
+    }
+  }
 }
 
 .about {
@@ -95,7 +165,7 @@ a {
   padding-bottom: 50px;
   background-color: rgb(32, 32, 39);
   background-image: url(./img/decoration/stars-3.svg), url(./img/decoration/star-big-2.svg);
-  background-position: 25px 770px, calc(100% + 142px) 77px;
+  background-position: 25px 770px, calc(100% + 108px) 111px;
   background-repeat: no-repeat;
 }
 
@@ -120,7 +190,7 @@ a {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 32px;
+    gap: 25px 32px;
   }
 
   .card-mini {
@@ -305,6 +375,21 @@ a {
     max-width: 624px;
   }
 }
+
+.game6 {
+  background-color: rgb(255, 255, 128);
+  background-image: url(./img/decoration/stars-1-transp.svg), url(./img/decoration/star-big-1-transp.svg), url(./img/decoration/stars-2-transp.svg);
+  padding-bottom: 88px;
+
+  .top__title {
+    max-width: 744px;
+  }
+
+  #colorGenerator {
+    font-weight: 400;
+  }
+}
+
 
 .tohomepage {
   margin-left: 24px;

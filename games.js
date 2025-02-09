@@ -4,6 +4,13 @@ function getRandomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+function getRandomColor() {
+  const r = Math.floor(Math.random() * 256);
+  const g = Math.floor(Math.random() * 256);
+  const b = Math.floor(Math.random() * 256);
+  return `rgb(${r}, ${g}, ${b})`;
+}
+
 // 1 - Угадай число
 
 function guessNumberGame() {
@@ -263,4 +270,15 @@ function rockPaperScissorsGame() {
   if (!play) {
     alert('Ждем тебя снова!');
   }
+}
+
+// 5 - Генератор случайных цветов
+
+function randomColorGeneratorGame() {
+  const sectionEl = document.querySelector('.game6');
+  const textEl = document.getElementById('colorGenerator')
+  let newColor = getRandomColor();
+
+  sectionEl.style.backgroundColor = newColor;
+  textEl.textContent = `Текущий цвет фона: ${newColor}`;
 }
